@@ -27,16 +27,16 @@ sudo apt-get install -y mongodb-org
 	Tạo file mongodb.service trong thư mục /etc/systemd/system/
 	với nội dung file như sau 
 
-[Unit]
-Description=High-performance, schema-free document-oriented database
-After=network.target
+	[Unit]
+	Description=High-performance, schema-free document-oriented database
+	After=network.target
  
-[Service]
-User=mongodb
-ExecStart=/usr/bin/mongod --quiet --config /etc/mongod.conf
+	[Service]
+	User=mongodb
+	ExecStart=/usr/bin/mongod --quiet --config /etc/mongod.conf
  
-[Install]
-WantedBy=multi-user.target
+	[Install]
+	WantedBy=multi-user.target
 
 Tắt dịch vụ và bắt đầu tiến hành cấu hình
 sudo service mongodb stop
