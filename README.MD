@@ -100,7 +100,7 @@ Kiểm tra thiết lập hệ thống
 	kiểm tra trạng thái replica set 
 	rs.status
 
-	Test hệ thống
+Test hệ thống
 	ở primary nhập dữ liệu vào và kiểm tra  
 	db.chris.save({_id:2, value:'Appconus'})
 	
