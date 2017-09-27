@@ -58,31 +58,31 @@ sudo vim /etc/hosts
 Cấu hình mongodbreplica
 Truy nhập vào thư mục /etc/mongodb.conf
 
-#mongod.conf                                                               
+	#mongod.conf                                                               
  
-#for documentation of all options, see:                                    
-#http://docs.mongodb.org/manual/reference/configuration-options/         
+	#for documentation of all options, see:                                    
+	#http://docs.mongodb.org/manual/reference/configuration-options/         
  
-#Where and how to store data.                                              
-storage:                                                                    
-  dbPath: /var/lib/mongodb                                                  
-  journal:                                                                  
-    enabled: true                                                          
+	#Where and how to store data.                                              
+	storage:                                                                    
+  	dbPath: /var/lib/mongodb                                                  
+ 	 journal:                                                                  
+   	 enabled: true                                                          
  
-#where to write logging data.                                              
-systemLog:                                                                  
-  destination: file                                                         
-  logAppend: true                                                           
-  path: /var/log/mongodb/mongod.log                                         
+	#where to write logging data.                                              
+	systemLog:                                                                  
+  	destination: file                                                         
+ 	logAppend: true                                                           
+  	path: /var/log/mongodb/mongod.log                                         
  
-#network interfaces                                                        
-net:                   
-  bindIp: [127.0.0.1, 192.168.1.36] #thêm địa chỉ IP tương ứng với server
-  port: 27017 
+	#network interfaces                                                        
+	net:                   
+  	bindIp: [127.0.0.1, 192.168.1.36] #thêm địa chỉ IP tương ứng với server
+  	port: 27017 
  
-replication:                                                           
-   oplogSizeMB: 30                                               
-   replSetName: appconus_rs #tên của replica
+	replication:                                                           
+   	oplogSizeMB: 30                                               
+   	replSetName: appconus_rs #tên của replica
 
 làm tương tự vs 2 server còn lại
 </ul>
