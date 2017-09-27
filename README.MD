@@ -118,6 +118,7 @@ sang secondary kiểm tra
 	quay trở về primary và bật dịch vụ mongodb lên xem trạng thái của primary lúc này 
 	<img src="https://i.imgur.com/g1zfluR.png">
 </ul>>
-** lưu ý ** tắt tường lửa, hoặc câu hình tường lửa allow port 27017
+**lưu ý** tắt tường lửa, hoặc câu hình tường lửa allow port 27017
+
 ## 2.5. Cây thư mục cài đặt mongodb bằng ansible
 <img src="https://i.imgur.com/Txn17Zz.png">
