@@ -1,0 +1,30 @@
+---
+- name: import the public key used by package management system 
+  command: apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv EA312927
+- name: create a list file for mongodb
+  shell: echo "deb http://repo.mongodb.org/apt/ubuntu xenial/mongodb-org/3.2 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-org-3.2.list
+
+- name: install mongodb
+  apt: name={{item}} state=latset update cache=yes
+  with_items:
+    - mongodb-org
+
+- name: create mongodb.service
+  copy: src=../files/mongodb.service dest=/etc/systemd/system/mongodb.service mode=0644
+
+- name: stop mongodb.service
+  service: name=mongodb state=stopped
+
+- name: config host name
+  hostname:
+    name: mongo2.appconus.com
+- name: edit in hostname file 
+  copy: src=hostname dest=/etc/hostname
+
+- name: edit in host file 
+  copy: src=hosts dest=/etc/hosts
+- name: config mongodb replica 
+  copy: src=mongodb.conf dest=/etc/mongodb.conf
+  
+- name: start mongodb service
+  service: name=mongodb state=started

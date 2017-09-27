@@ -1,0 +1,4 @@
+127.0.0.1    localhost mongo1.appconus.com
+192.168.1.36 mongo1.appconus.com
+192.168.1.48 mongo2.appconus.com
+192.168.1.49 mongo3.appconus.com

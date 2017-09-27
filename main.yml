@@ -1,0 +1,22 @@
+---
+- hosts: primary
+  remote_user: chris
+  sudo: True
+
+  roles:
+  - role: primary
+
+- hosts: secondary
+  remote_user: chris
+  sudo: True
+
+  roles:
+  - role: secondary
+
+
+- hosts: arbitrator
+  remote_user: chris
+  sudo: True
+
+  roles: 
+  - role: arbitrator
