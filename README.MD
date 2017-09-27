@@ -5,3 +5,4 @@ Replica set là một hệ replication trong mongoDB. Tập data sẽ được n
 </ul>
 ##1.2. Mô hình 
 <img src=https://i.imgur.com/drfPWzE.png>
+<img src=https://i.imgur.com/Txn17Zz.png>
