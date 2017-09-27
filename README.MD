@@ -15,7 +15,7 @@ Mô hình triển khai gồm 3 máy:
 # II. Triển khai 
 ## 2.1. Cài đặt mongodb
 <ul>
-sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv EA312927
+sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv EA312927 \
 echo "deb http://repo.mongodb.org/apt/ubuntu xenial/mongodb-org/3.2 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-org-3.2.list
 sudo apt-get update
 sudo apt-get install -y mongodb-org
