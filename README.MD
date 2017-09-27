@@ -101,13 +101,13 @@ Kiểm tra thiết lập hệ thống
 	rs.status
 
 Test hệ thống
-	ở primary nhập dữ liệu vào và kiểm tra  
-	db.chris.save({_id:2, value:'Appconus'})
+ở primary nhập dữ liệu vào và kiểm tra  
+db.chris.save({_id:2, value:'Appconus'})
 	
-	db.chris.find()
+db.chris.find()
 	<img src="https://i.imgur.com/5TvACxk.png">
 
-	sang secondary kiểm tra 
+sang secondary kiểm tra 
 	<img src="https://i.imgur.com/XZQHAYe.png">
 
  kiểm tra việc bầu cử
