@@ -4,7 +4,7 @@
 Replica set là một hệ replication trong mongoDB. Tập data sẽ được nhân bản trên nhiều server khác nhau thay vì tập trung trên chỉ duy nhất 1 con server. Nhờ vậy, replica đáp ứng cao tính High avaibility và dự phòng. Nó cũng scale read request cho mogodb. Mô hình của replica set trong mongodb gần giống replication trong mysql
 </ul>
 ## 1.2. Mô hình 
-<img src="https://imgur.com/a/Tqe05">
+<img src="https://i.imgur.com/drfPWzE.png">
 <ul>
 Mô hình triển khai gồm 3 máy:
 * máy đóng vai trò là primary: ubuntu server 16.04, địa chỉ IP: 192.168.1.36/24
@@ -36,8 +36,8 @@ ExecStart=/usr/bin/mongod --quiet --config /etc/mongod.conf
 [Install]
 WantedBy=multi-user.target
 
-	Tắt dịch vụ và bắt đầu tiến hành cấu hình
-	sudo service mongodb stop
+Tắt dịch vụ và bắt đầu tiến hành cấu hình
+sudo service mongodb stop
 </ul>
 ## 2.3. Cấu hình mongodb replica
 <ul>
@@ -53,8 +53,8 @@ sudo vim /etc/hosts
 192.168.1.49 mongo3.appconus.com
 
 
-	** Cấu hình mongodbreplica **
-	Truy nhập vào thư mục /etc/mongodb.conf
+Cấu hình mongodbreplica
+Truy nhập vào thư mục /etc/mongodb.conf
 
 #mongod.conf                                                               
  
@@ -95,12 +95,12 @@ làm tương tự vs 2 server còn lại
 	thêm arbitrator
 	rs.add('mongo3.appconus.com:2017' true)
 
-	Kiểm tra thiết lập hệ thống 
+Kiểm tra thiết lập hệ thống 
 	rs.config()
 	kiểm tra trạng thái replica set 
 	rs.status
 
-	** Test hệ thống **
+	Test hệ thống
 	ở primary nhập dữ liệu vào và kiểm tra  
 	db.chris.save({_id:2, value:'Appconus'})
 	
@@ -110,7 +110,7 @@ làm tương tự vs 2 server còn lại
 	sang secondary kiểm tra 
 	<img src="https://i.imgur.com/XZQHAYe.png">
 
-	** kiểm tra việc bầu cử **
+ kiểm tra việc bầu cử
 	tắt mongodb service trên primary và sang secondary kiểm tra 
 	<img src="https://i.imgur.com/4baXAGc.png">
 	quay trở về primary và bật dịch vụ mongodb lên xem trạng thái của primary lúc này 
