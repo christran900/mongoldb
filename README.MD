@@ -3,7 +3,7 @@
 <ul>
 Replica set là một hệ replication trong mongoDB. Tập data sẽ được nhân bản trên nhiều server khác nhau thay vì tập trung trên chỉ duy nhất 1 con server. Nhờ vậy, replica đáp ứng cao tính High avaibility và dự phòng. Nó cũng scale read request cho mogodb. Mô hình của replica set trong mongodb gần giống replication trong mysql
 </ul>
-## 1.2. Mô hình 
+### 1.2. Mô hình 
 <img src="https://i.imgur.com/drfPWzE.png">
 <ul>
 Mô hình triển khai gồm 3 máy:
@@ -22,7 +22,7 @@ echo "deb http://repo.mongodb.org/apt/ubuntu xenial/mongodb-org/3.2 multiverse" 
 sudo apt-get update
 sudo apt-get install -y mongodb-org
 </ul>
-## 2.2. cài đặt mongodb.service
+### 2.2. cài đặt mongodb.service
 <ul>
 	Tạo file mongodb.service trong thư mục /etc/systemd/system/
 	với nội dung file như sau 
@@ -41,7 +41,7 @@ WantedBy=multi-user.target
 Tắt dịch vụ và bắt đầu tiến hành cấu hình
 sudo service mongodb stop
 </ul>
-## 2.3. Cấu hình mongodb replica
+#### 2.3. Cấu hình mongodb replica
 <ul>
 	sửa hostname: sudo hostname mongo1.appconus.com
 	truy cập vào file và sửa file hostname: sudo vim /etc/hostname --> mongo1.appcounus.com
@@ -86,7 +86,7 @@ replication:
 
 làm tương tự vs 2 server còn lại
 </ul>
-## 2.4. Sử dụng 
+##### 2.4. Sử dụng 
 <ul>
 	Tại primary khởi động mongodb
 	sudo service mongodb start 
@@ -118,5 +118,5 @@ sang secondary kiểm tra
 	quay trở về primary và bật dịch vụ mongodb lên xem trạng thái của primary lúc này 
 	<img src="https://i.imgur.com/g1zfluR.png">
 </ul>>
-## 2.5. Cây thư mục cài đặt mongodb bằng ansible
+###### 2.5. Cây thư mục cài đặt mongodb bằng ansible
 <img src="https://i.imgur.com/Txn17Zz.png">
