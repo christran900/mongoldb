@@ -47,11 +47,11 @@ sudo service mongodb stop
 	truy cập vào file /etc/hosts và sửa thành như sau 
 
 
-sudo vim /etc/hosts
-127.0.0.1 localhost mongo1.appconus.com
-192.168.1.36 mongo1.appconus.com
-192.168.1.48 mongo2.appconus.com
-192.168.1.49 mongo3.appconus.com
+	sudo vim /etc/hosts
+	127.0.0.1 localhost mongo1.appconus.com
+	192.168.1.36 mongo1.appconus.com
+	192.168.1.48 mongo2.appconus.com
+	192.168.1.49 mongo3.appconus.com
 
 
 Cấu hình mongodbreplica
